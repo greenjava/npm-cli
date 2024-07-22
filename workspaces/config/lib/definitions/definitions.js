@@ -210,6 +210,15 @@ const definitions = {
     `,
     flatten,
   }),
+  'ignore-unfixed': new Definition('ignore-unfixed', {
+    default: false,
+    type: Boolean,
+    description: `
+      When "true" do not exit with a non-zero exit code when vulnerabilities
+      are found and no fix is available.
+    `,
+    flatten,
+  }),
   'audit-level': new Definition('audit-level', {
     default: null,
     type: [null, 'info', 'low', 'moderate', 'high', 'critical', 'none'],
